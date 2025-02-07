@@ -1,0 +1,17 @@
+{% extends 'store/main.html' %}
+{% load static %}
+{% load crispy_forms_tags %}
+{%block content%}
+
+
+<div class="container-register">
+    <div class="form-container-register">
+        <h2>Register</h2>
+        <form method="POST">
+            {% csrf_token %}
+            {{ form|crispy }}
+            <button type="submit" class="btn btn-primary ">Register</button>
+        </form>
+    </div>
+</div>
+{%endblock content%}

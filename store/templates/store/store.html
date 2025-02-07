@@ -1,0 +1,26 @@
+{% extends 'store/main.html' %}
+{% load static%}
+{% block content%}
+
+<link rel="stylesheet" type="text/css" href="{% static 'css/bootstrap.min.css' %}">
+{% comment %} /* In href, what the code will do is it will look in the static folder and then go to the css folder and look for main.css*/ {% endcomment %}
+<section class="home" id ="home"> 
+<div class="carousel">
+    <div class="carousel_item carousel_item--visible">
+        <img src="{%static 'images/slider-1.jpg'%}">
+    </div>
+    <div class="carousel_item carousel_item--hidden">
+        <img src="{%static 'images/organic-farm.jpg'%}">
+    </div>
+    <div class="carousel_item carousel_item--hidden">
+        <img src="{%static 'images/slider-3.jpg'%}">
+    </div>
+    <div class="carousel_actions">
+       <button id="carousel_button--prev"><</button>
+        <button id="carousel_button--next">></button>
+    </div>
+</div>
+</section>
+
+<script src="% static 'js/script.js'%"></script>
+{% endblock content%}
